@@ -1,18 +1,68 @@
+const config = require('./config/site')
+
 module.exports = {
   siteMetadata: {
-    title: 'My Wonderful Website',
-    description: 'Welcome to your brilliant website.',
-    author: 'Cool Developer'
+    ...config
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
-    'gatsby-transformer-remark',
-      {
-        resolve: 'gatsby-source-filesystem',
-        options: {
-          name: 'posts',
-          path: `${__dirname}/posts`
-        }
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/content/posts`
       }
-    ]
+    },
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 750,
+              quality: 90,
+              linkImagesToOriginal: true
+            }
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false
+            }
+          }
+        ]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-emotion',
+      options: {
+        // autoLabel: 'production',
+        // eslint-disable-next-line
+        labelFormat: `[filename]--[local]`,
+      }
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: config.title,
+        short_name: config.shortName,
+        description: config.description,
+        start_url: config.pathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: 'standalone',
+        icon: config.favicon
+      }
+    },
+    'gatsby-plugin-offline'
+  ]
 }

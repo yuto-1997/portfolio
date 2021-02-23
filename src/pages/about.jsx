@@ -1,20 +1,28 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 import Layout from '../layouts'
+import Container from '../layouts/Container'
+import Header from '../layouts/Header'
 
-export default ({ data }) => (
+const About = center => (
   <Layout>
-    <h1>{data.site.siteMetadata.title} About</h1>
-    <p>This is the about page.</p>
+    <Helmet title={'About Page'} />
+    <Header title='About Page'>Gatsby Starter Noodles</Header>
+    <Container center={center}>
+      <h3>
+        このサイトを一から作りたいという方は{' '}
+        <a href='https://qiita.com/so99ynoodles/items/87e136d09644baac634c'>
+          ここ
+        </a>
+        をご確認ください。
+      </h3>
+    </Container>
   </Layout>
 )
 
-export const query = graphql`
-  query AboutQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+export default About
+
+Container.propTypes = {
+  center: PropTypes.object
+}

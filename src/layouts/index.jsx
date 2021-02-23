@@ -1,27 +1,23 @@
 import React from 'react'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import PropTypes from 'prop-types'
+import ThemeProvider from './ThemeProvider'
+import Global from './Global'
+import SEO from '../components/SEO'
+import NavBar from './NavBar'
+import Footer from './Footer'
 
-export default ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <div>
-        <Link to="/">
-          <h3>{data.site.siteMetadata.title} Layout</h3>
-        </Link>
-        <Link to="/about">
-          About
-        </Link>
-        {children}
-      </div>
-    )}
-  />
+const Layout = ({ children }) => (
+  <ThemeProvider>
+    <Global />
+    <SEO />
+    <NavBar />
+    {children}
+    <Footer />
+  </ThemeProvider>
 )
+
+Layout.propTypes = {
+  children: PropTypes.node
+}
+
+export default Layout

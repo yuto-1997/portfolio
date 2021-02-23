@@ -14,12 +14,47 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "gatsby": "^2.26.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "@babel/core": "^7.2.2",
+    "@emotion/core": "^10.0.6",
+    "@emotion/styled": "^10.0.6",
+    "babel-plugin-emotion": "^10.0.6",
+    "emotion-theming": "^10.0.6",
+    "gatsby": "^2.0.91",
+    "gatsby-image": "^2.0.26",
+    "gatsby-plugin-catch-links": "^2.0.9",
+    "gatsby-plugin-emotion": "^4.0.1",
+    "gatsby-plugin-google-analytics": "^2.0.9",
+    "gatsby-plugin-manifest": "^2.0.13",
+    "gatsby-plugin-offline": "^2.0.21",
+    "gatsby-plugin-react-helmet": "^3.0.5",
+    "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-plugin-sitemap": "^2.0.4",
+    "gatsby-remark-images": "^3.0.1",
+    "gatsby-remark-prismjs": "^3.2.0",
+    "gatsby-source-filesystem": "^2.0.13",
+    "gatsby-transformer-remark": "^2.2.0",
+    "gatsby-transformer-sharp": "^2.1.10",
+    "prismjs": "^1.15.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-headroom": "^2.2.4",
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-standard-react": "^8.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.3",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "lighthouse": "^3.2.1",
+    "prettier": "^1.15.3"
   },
   "repository": {
     "type": "git",
@@ -30,6 +65,12 @@
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-hello-world#readme",
   "main": "gatsby-config.js",
-  "keywords": [],
+  "keywords": [
+    "blog",
+    "gatsby",
+    "emotion",
+    "seo",
+    "starter"
+  ],
   "author": ""
 }
