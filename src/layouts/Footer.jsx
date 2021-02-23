@@ -21,7 +21,7 @@ const Footer = () => (
     <Text>
       <span>
         Gatsby Starter Noodles -{' '}
-        <a href='https://github.com/so99ynoodles'>Taiki Ikeda</a>
+        <a href='https://github.com/yuto-1997'>Yuto Shibano</a>
       </span>
     </Text>
   </Wrapper>
