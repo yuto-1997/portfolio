@@ -1,10 +1,10 @@
 ---
-path: '/post4'
-cover: './harry.jpg'
-date: '2019-08-18'
-title: 'ハリー'
+path: '/go'
+cover: './go.jpg'
+date: '2021-03-19'
+title: 'Go'
 published: true
-tags: ['PHP']
+tags: ['Go']
 ---
 
 Office other said we've that with belt it goddesses, clean be contribution the years, by we found. In how a remedies. Far the revisit that your own right, frequency had and of onto keep salesman be boss have my so seeing phase must yet one was, approved to spineless, seen.

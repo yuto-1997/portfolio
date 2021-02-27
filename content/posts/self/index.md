@@ -1,7 +1,7 @@
 ---
-path: '/post1'
-cover: './joker.jpg'
-date: '2021-01-20'
+path: '/self'
+cover: './portrait.jpg'
+date: '2021-01-06'
 title: 'Shibano Yuto'
 published: true
 ---
